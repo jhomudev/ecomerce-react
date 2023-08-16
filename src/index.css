@@ -1,0 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.link-header{
+  @apply after:bg-c_orange-normal after:transition-all after:duration-500 after:w-0 after:h-1 after:absolute after:content-[''] after:left-1/2 after:bottom-0
+  after:hover:w-full after:hover:left-0
+}
