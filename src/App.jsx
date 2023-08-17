@@ -13,7 +13,7 @@ function App () {
       <section className='bg-gray-100 p-5'>
         <div className='container mx-auto'>
           <h1 className='text-xl font-medium text-c_dark-strong'>Compra productos destacados</h1><br />
-          <div className='flex gap-10'>
+          <div className='flex flex-col sm:flex-row gap-10'>
             <Filter />
             <div className='w-full flex-1 flex flex-col gap-3'>
               <FiltersThere />

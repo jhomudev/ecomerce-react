@@ -25,7 +25,7 @@ export default function Filter () {
   }
 
   return (
-    <aside className='bg-white w-[min(100%,300px)] p-5'>
+    <aside className='bg-white w-full sm:w-[min(100%,300px)] p-5'>
       <h4 className='text-c_dark-strong font-medium mb-3'>Filtro</h4>
       <div className='filters grid gap-5'>
         <div className='filter grid gap-2'>
