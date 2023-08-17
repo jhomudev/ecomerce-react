@@ -1,17 +1,16 @@
-import React, { createContext, useState } from 'react'
+import React, { createContext } from 'react'
+import { useFiltersReducer } from '../hooks/useFiltersReducer'
 
 export const FilterContext = createContext()
 
 function FilterProvider ({ children }) {
-  const [filters, setFilters] = useState({
-    minPrice: 0,
-    categories: []
-  })
-
+  const { state, addCategory, removeCategory, changeMinPrice } = useFiltersReducer()
   return (
     <FilterContext.Provider value={{
-      filters,
-      setFilters
+      filters: state,
+      addCategory,
+      removeCategory,
+      changeMinPrice
     }}
     >
       {children}

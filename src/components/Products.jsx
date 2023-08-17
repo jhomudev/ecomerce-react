@@ -4,7 +4,7 @@ import { PlusSquare, ShoppingCart } from '@phosphor-icons/react'
 
 function ProductItem ({ name, price, img, isInCart, addToCart }) {
   return (
-    <article className='bg-white group w-full flex flex-col gap-1 shadow-2xl rounded-sm overflow-hidden'>
+    <article className='bg-white group w-full flex flex-col gap-1 shadow-md rounded-sm overflow-hidden'>
       <picture className='w-full h-[170px] overflow-hidden group-hover:brightness-75 transition-all duration-700 ease-in'>
         <img className='w-full h-full object-fill' src={img} alt={name} />
       </picture>
