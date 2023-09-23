@@ -7,6 +7,7 @@ import { useFilters } from './hooks/useFilters'
 function App () {
   const { filters } = useFilters()
   const { productsFilter } = useProducts({ filters })
+
   return (
     <div className='container-all font-kumbh'>
       <Header />

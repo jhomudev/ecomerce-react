@@ -3,10 +3,10 @@ import { useFilters } from '../hooks/useFilters'
 import { products } from './../mocks/productos.json'
 
 const CATEGORIES_PRODUCTS = [
-  { srcName: 'home-decoration', name: 'Decoraciones' },
-  { srcName: 'smartphones', name: 'Celulares' },
-  { srcName: 'fragrances', name: 'Fragancias' },
-  { srcName: 'laptops', name: 'Laptops' }
+  { id: crypto.randomUUID(), srcName: 'home-decoration', name: 'Decoraciones' },
+  { id: crypto.randomUUID(), srcName: 'smartphones', name: 'Celulares' },
+  { id: crypto.randomUUID(), srcName: 'fragrances', name: 'Fragancias' },
+  { id: crypto.randomUUID(), srcName: 'laptops', name: 'Laptops' }
 ]
 
 export default function Filter () {
@@ -64,7 +64,7 @@ export function FiltersThere () {
         {
           filters.categories.map((cat) => (
             <li key={cat.srcName} className='bg-white py-2 px-3 flex gap-2 items-center shadow-md rounded-full'>{cat.name}
-              <button onClick={() => { removeCategory({ srcNameCat: cat.srcName }) }} className='hover:text-red-500'><X size={15} /></button>
+              <button onClick={() => { removeCategory({ idCat: cat.id }) }} className='hover:text-red-500'><X size={15} /></button>
             </li>
           ))
         }

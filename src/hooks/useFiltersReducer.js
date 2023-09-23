@@ -11,10 +11,10 @@ export function useFiltersReducer () {
     })
   }
 
-  function removeCategory ({ srcNameCat }) {
+  function removeCategory ({ idCat }) {
     dispatch({
       actionType: 'REMOVE_CATEGORY',
-      payload: srcNameCat
+      payload: idCat
     })
   }
 

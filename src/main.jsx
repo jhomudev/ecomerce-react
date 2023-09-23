@@ -6,11 +6,9 @@ import FilterProvider from './context/FilterContext.jsx'
 import CartProvider from './context/CartContext.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <FilterProvider>
-      <CartProvider>
-        <App />
-      </CartProvider>
-    </FilterProvider>
-  </React.StrictMode>
+  <FilterProvider>
+    <CartProvider>
+      <App />
+    </CartProvider>
+  </FilterProvider>
 )

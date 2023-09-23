@@ -14,12 +14,15 @@ export const FilterReducer = (state, action) => {
 
   switch (actionType) {
     case TYPES.ADD_CATEGORY: {
-      if (state.categories.includes(payload)) return
-      const newState = { ...state, categories: [...state.categories, payload] }
+      const categoryToAdd = payload
+      const isAlreadyCat = state.categories.some(categorie => categorie.id === categoryToAdd.id)
+      if (isAlreadyCat) return state
+      const newState = { ...state, categories: [...state.categories, categoryToAdd] }
       return newState
     }
     case TYPES.REMOVE_CATEGORY: {
-      const newCategories = [...state.categories].filter((category) => category.srcName !== payload)
+      const idCatToRemove = payload
+      const newCategories = [...state.categories].filter((category) => category.id !== idCatToRemove)
       const newState = {
         ...state,
         categories: newCategories
